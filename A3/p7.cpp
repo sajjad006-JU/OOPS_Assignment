@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+class Time {
+    private:
+        int hour, minute, second;
+    
+    Time() {
+d
+    }
+};
+
+int main () {
+    
+
+}
