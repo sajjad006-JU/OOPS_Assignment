@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "queue.c"
 
 typedef struct Node {
     int val;
@@ -40,9 +41,13 @@ int main (int argc, char *argv[]) {
     }
 
     int x;
+
     while (1) {
         fscanf(fp, "%d", &x);
         printf("%d ", x);
+
+        Node* node=createNode(x);
+        node->left
 
         if (x==-1)
             break;
