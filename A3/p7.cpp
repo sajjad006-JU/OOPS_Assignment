@@ -64,10 +64,10 @@ class Time {
 };
 
 int main () {
-    Time t(11,  23, 21);
+    Time t(23,  23, 21);
     t.display();
     t.display(1);
-    t.addMinutes(45);
+    t.addMinutes(120);
     t.display();
     t.display(1);
 }
