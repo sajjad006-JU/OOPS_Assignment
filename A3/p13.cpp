@@ -27,9 +27,7 @@ class Transaction {
         char transaction_type;
     
     public:
-        float withdraw(int acount_number, float amount, char* transaction_date) {
-            
-        }
+        Transaction(int account_number, )
 };
 
 int main () {

@@ -7,7 +7,7 @@ void f(int a) {
     return;
 }
 
-void ff(float a) {
+void f(float a) {
     cout << "Inside f(float)\n";
     return;
 }
@@ -18,12 +18,12 @@ int main () {
     f(21);
     f('a');
     f(a);
-    f(d);
+    // f(d);
 
     cout << "\n";
-    ff(21);
-    ff('a');
-    ff(a);
-    ff(d);
+    f(21);
+    f('a');
+    f(a);
+    // f(d);
 
 }

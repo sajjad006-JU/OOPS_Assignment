@@ -110,5 +110,7 @@ int main() {
 
     Array a3=a1+a2;
     a3=a3*5;
+    a3[1]=-5;
+    a3=a3+5;
     cout << a3;
 }
