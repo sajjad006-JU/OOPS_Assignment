@@ -1,4 +1,4 @@
-/*
+
 
 #include <iostream>
 #include <string>
@@ -22,19 +22,26 @@ private:
 
 public:
     // Constructors
-    Book(string bookID, int serialNumber, string title, string author, string publisher, double price);
+    Book(string bookID, int serialNumber, string title, string author, string publisher, double price) {
+        this->bookID=bookID;
+        this->serialNumber=serialNumber;
+        this->title=title;
+        this->author=author;
+        this->publisher=publisher;
+        this->price=price;
+    }
 
     // Getters
-    string getBookID() const;
-    int getSerialNumber() const;
-    string getTitle() const;
-    string getAuthor() const;
-    string getPublisher() const;
-    double getPrice() const;
-    bool getIssuedStatus() const;
+    string getBookID() const {return bookID;}
+    int getSerialNumber() const {return serialNumber;}
+    string getTitle() const {return title;}
+    string getAuthor() const {return author;}
+    string getPublisher() const {return publisher;}
+    double getPrice() const {return price;}
+    bool getIssuedStatus() const {return isIssued;}
 
     // Setters
-    void setIssuedStatus(bool status);
+    void setIssuedStatus(bool status) {isIssued=status;}
 };
 
 //---------------------------------------------
@@ -49,24 +56,29 @@ protected:
     int issuedCount;
 
 public:
-    Member(string memberID, string name, string email, string address);
+    Member(string memberID, string name, string email, string address) {
+        this->memberID=memberID;
+        this->name=name;
+        this->email=email;
+        this->address=address;
+    }
 
     // Virtual Destructor
     virtual ~Member() {}
 
     // Getters
-    string getMemberID() const;
-    string getName() const;
-    string getEmail() const;
-    string getAddress() const;
+    string getMemberID() const {return memberID;}
+    string getName() const {return name;}
+    string getEmail() const {return email;}
+    string getAddress() const {return address;}
 
     // Pure virtual function for issue limit
     virtual int getIssueLimit() const = 0;
 
     // Manage issued books
-    void incrementIssuedCount();
-    void decrementIssuedCount();
-    int getIssuedCount() const;
+    void incrementIssuedCount() {issuedCount++;}
+    void decrementIssuedCount() {issuedCount--;}
+    int getIssuedCount() const {return issuedCount;};
 };
 
 //---------------------------------------------
@@ -141,6 +153,3 @@ public:
     void returnBook(const string& memberID, const string& bookID, int serialNumber, const string& dateOfTransaction);
     void displayAllTransactions() const;
 };
-
-
-*/
